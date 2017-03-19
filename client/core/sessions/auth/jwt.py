@@ -43,6 +43,8 @@ class JWTBearerAuth(AuthBase):
 
     def __call__(self, r=requests.Request()):
         """Apply authentication to the current request."""
+        if not self.token:
+            raise Exception('')
         log.debug('Adding JWT Bearer token to request')
         r.headers.update(self.auth_header)
         return r

@@ -7,8 +7,8 @@ This module provides authentication to TheTVDB API v2.
 import logging
 
 import requests
-from sessions.auth.utils.jwt import jwt_payload
-from sessions.auth.jwt import JWTBearerAuth
+from client.core.sessions.auth.jwt import JWTBearerAuth
+from client.core.sessions.auth.utils.jwt import jwt_payload
 
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())
